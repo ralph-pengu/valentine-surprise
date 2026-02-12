@@ -1,10 +1,8 @@
-function openEnvelope() {
-  document.getElementById("envelope-screen").style.display = "none";
-  document.getElementById("valentine-screen").classList.remove("hidden");
-  document.getElementById("bg-music").play();
-}
+// Select flower container and button
+const flower = document.querySelector('.flower');
+const bloomBtn = document.getElementById('bloomBtn');
 
-function showLove() {
-  document.getElementById("surprise").innerHTML =
-    "Sheree, you are my forever Valentine ❤️🌹";
-}
+// Add bloom animation on button click
+bloomBtn.addEventListener('click', () => {
+  flower.classList.toggle('bloom');
+});
