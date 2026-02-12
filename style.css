@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
+  overflow: hidden;
+}
+
+/* ================= ENVELOPE SCREEN ================= */
+#envelope-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.envelope {
+  position: relative;
+  width: 200px;
+  height: 120px;
+}
+
+.body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff69b4;
+  border-radius: 0 0 15px 15px;
+}
+
+.flap {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 60px solid #ff85c1;
+  top: -60px;
+  transition: transform 1s;
+}
+
+.click-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+
+/* ================= VALENTINE SCREEN ================= */
+.hidden {
+  display: none;
+}
+
+#valentine-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 25px;
+  width: 360px;
+  animation: pop 1s ease;
+  z-index: 2;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  color: #e63946;
+}
+
+h1 span {
+  color: #ff4d6d;
+}
+
+/* Flower */
+.flower {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  margin: 20px auto;
+  animation: sway 3s infinite ease-in-out;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.petal {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ff8fab;
+  border-radius: 50%;
+}
+
+.p1 { top: 30px; left: 35px; }
+.p2 { top: 10px; left: 60px; }
+.p3 { top: 10px; left: 10px; }
+.p4 { top: 50px; left: 35px; }
+
+.center {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+  width: 30px;
+  height: 30px;
+  background: gold;
+  border-radius: 50%;
+}
+
+.stem {
+  position: absolute;
+  top: 80px;
+  left: 58px;
+  width: 5px;
+  height: 90px;
+  background: green;
+}
+
+/* Button */
+button {
+  padding: 12px 25px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #e63946;
+}
+
+#surprise {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #d62828;
+  font-weight: bold;
+}
+
+/* Floating Hearts */
+.hearts::before,
+.hearts::after {
+  content: "❤️ 💖 💕 💘";
+  position: absolute;
+  font-size: 24px;
+  animation: float 10s linear infinite;
+  opacity: 0.6;
+}
+
+.hearts::after {
+  animation-delay: 5s;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}

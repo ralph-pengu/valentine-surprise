@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Envelope Screen -->
+<div id="envelope-screen" onclick="openEnvelope()">
+  <div class="envelope">
+    <div class="flap"></div>
+    <div class="body"></div>
+  </div>
+  <p class="click-text">Click the envelope 💌</p>
+</div>
+
+<!-- Valentine Content -->
+<div id="valentine-screen" class="hidden">
+
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="hearts"></div>
+
+  <div class="container">
+    <h1>Happy Valentine’s Day, <span>Sheree</span> 💕</h1>
+
+    <p class="message">
+      This is my little surprise just for you 🌸  
+      A flower for the girl who owns my heart 💖
+    </p>
+
+    <div class="flower">
+      <div class="petal p1"></div>
+      <div class="petal p2"></div>
+      <div class="petal p3"></div>
+      <div class="petal p4"></div>
+      <div class="center"></div>
+      <div class="stem"></div>
+    </div>
+
+    <button onclick="showLove()">Tap for my message 💌</button>
+    <p id="surprise"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
